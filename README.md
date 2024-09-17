@@ -1,8 +1,3 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Mortiverso es una aplicación que explora el vasto multiverso de Rick y Morty. A través de la [API](https://rickandmortyapi.com/api/character), la aplicación permite a los usuarios visualizar una galería de personajes en formato de tarjetas, completas con imágenes y descripciones detalladas. 
+Los usuarios también tienen la posibilidad de añadir nuevos personajes a la lista utilizando un formulario que permite incorporar nuevos personajes al inicio de la lista.
+Este es un proyecto realizado por el grupo #1 del programa de [Mujeres Digitales](https://es.linkedin.com/posts/organizacionkeycode_iniciamos-formación-mujeres-digitales-activity-7228805046291890179-Ahwn).
