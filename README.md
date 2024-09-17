@@ -1,4 +1,8 @@
-# mortiverso
-Mortiverso es una aplicación que explora el vasto multiverso de Rick y Morty, a través de la [API](https://rickandmortyapi.com/documentation) oficial de la serie.
-La aplicación permite a los usuarios visualizar una galería de personajes en formato de tarjetas, completas con imágenes y descripciones detalladas. Los usuarios también tienen la posibilidad de añadir nuevos personajes a la lista utilizando un formulario intuitivo, y estos nuevos elementos se incorporan al inicio de la lista.
-Grupo de trabajo #1. Tablero del proyecto [Trello](https://trello.com/b/EvvB9JRm/listado-y-modificación-de-productos).
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
