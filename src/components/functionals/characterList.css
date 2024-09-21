@@ -1,0 +1,44 @@
+.characterList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    background-color: rgb(56, 56, 56);
+    border-radius: 15px;
+}
+
+.card div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card div figure {
+    width: 100%;
+    padding: 20px;
+}
+
+.card div figure img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card div h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(6, 142, 226);
+}
+
+.home h1 {
+    text-align: center;
+    margin: 20px 0;
+}
