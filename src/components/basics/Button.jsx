@@ -1,19 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Button = (text) => {
+const Button = ({ text, setRoute }) => {
+    const handlerButton = () => {
+        const textRouteLower = text.toLowerCase();
+        setRoute(textRouteLower);
+    };
 
-    const handleButton = () => {
-        ///lógica
-    }
     return (
-        <button onClick={handleButton}>{text}</button>
-    )
-}
+        <li>
+            <button onClick={handlerButton}>{text}</button>
+        </li>
+    );
+};
 
-    
 Button.propTypes = {
-    text : PropTypes.string.isRequired
-}
+    text: PropTypes.string,
+    setRoute: PropTypes.func,
+};
 
-export default Button
+export default Button;

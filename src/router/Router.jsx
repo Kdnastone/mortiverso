@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Team from "../pages/Team";
-import Character from "../pages/Characters";
 import New from "../pages/New";
+import Characters from "../pages/Characters";
+import Team from "../pages/Team";
 
 const Router = () => {
     const [route, setRoute] = useState("team");
@@ -10,8 +10,8 @@ const Router = () => {
         case "team":
             return <Team setRoute={setRoute} />;
 
-        case "character":
-            return <Character setRoute={setRoute} />;
+        case "characters":
+            return <Characters setRoute={setRoute} />;
 
         case "new":
             return <New setRoute={setRoute} />;
