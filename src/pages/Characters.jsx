@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Layout from "../components/basics/Layout";
+import Layout from "../components/functionals/Layout";
 import PropTypes from "prop-types";
 import CharacterList from '../components/functionals/CharacterList.jsx';
 import { getRandomCharacters } from '../service/api.js';
 
 
-const Characters = ({ setRoute }) => {
+const Characters = () => {
     const [characters, setCharacters] = useState([]);
 
     const fetchCharacters = async () => {
@@ -19,7 +19,7 @@ const Characters = ({ setRoute }) => {
     }, []);
 
     return (
-      <Layout setRoute={setRoute}>
+      <Layout>
         <div className="home">
           <h1>Rick and Morty - Tres Personajes aleatorios</h1>
           <CharacterList characters={characters} />
@@ -29,7 +29,7 @@ const Characters = ({ setRoute }) => {
 };
 
 Characters.propTypes = {
-    setRoute: PropTypes.func.isRequired,
+
 };
 
 export default Characters;
