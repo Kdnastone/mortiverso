@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import ContainerInputs from '../components/functionals/ContainerInputs'
 import Button from '../components/basics/Button'
 import Modal from '../components/functionals/Modal'
@@ -116,27 +115,6 @@ const inputs = {imagen: {label:"Imagen:", type:"text", name:"image", placeholder
           <Button type='Submit' text='Agregar'></Button>
           {showModal? <Modal handlerButton={handlerButton} text={textModal} /> : null}
       </form>
-    </Layout>
-  )
+    </Layout>
+  )
 }
-=======
-import Layout from "../components/basics/Layout";
-import PropTypes from "prop-types";
-
-const New = ({ setRoute }) => {
-    return (
-        <Layout setRoute={setRoute}>
-            <div>
-                <h1>Agregar Nuevo Personaje</h1>
-
-            </div>
-        </Layout>
-    );
-};
-
-New.propTypes = {
-    setRoute: PropTypes.func,
-};
-
-export default New;
->>>>>>> development
