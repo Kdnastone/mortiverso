@@ -1,36 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import Layout from "../components/functionals/Layout";
+import React from 'react';
+import Layout from "../components/basics/Layout";
 import PropTypes from "prop-types";
 import CharacterList from '../components/functionals/CharacterList.jsx';
-import { getRandomCharacters } from '../service/api.js';
 
-
-const Characters = () => {
-    const [characters, setCharacters] = useState([]);
-
-    const fetchCharacters = async () => {
-      const randomCharacters = await getRandomCharacters();
-      console.log('Nuevos personajes obtenidos:', randomCharacters);
-      setCharacters(randomCharacters);
-    };
-
-    useEffect(() => {
-      fetchCharacters();
-    }, []);
-
-    return (
-      <Layout>
-        <div className="home">
-          <h1>Rick and Morty - Tres Personajes aleatorios</h1>
-          <CharacterList characters={characters} />
-        </div>
-      </Layout>
-    );
+const Characters = ({ setRoute, characters }) => {
+  return (
+    <Layout setRoute={setRoute}>
+      <div className="home">
+        <h1>Rick and Morty - Personajes</h1>
+        <CharacterList characters={characters} />
+      </div>
+    </Layout>
+  );
 };
 
 Characters.propTypes = {
-
+  setRoute: PropTypes.func.isRequired,
+  characters: PropTypes.array.isRequired,
 };
 
 export default Characters;
-
