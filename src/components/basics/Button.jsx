@@ -1,19 +1,18 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 
-const Button = (text) => {
+import './button.css'
 
-    const handleButton = () => {
-        ///lógica
-    }
+const Button = ({text, type, handlerButton}) => {
     return (
-        <button onClick={handleButton}>{text}</button>
+        <button onClick={handlerButton} type={type}>{text}</button>
     )
 }
 
     
 Button.propTypes = {
-    text : PropTypes.string.isRequired
+    text : PropTypes.string.isRequired,
+    type: PropTypes.string,
+    handlerButton: PropTypes.func
 }
 
 export default Button
