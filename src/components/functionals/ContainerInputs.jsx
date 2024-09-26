@@ -17,6 +17,9 @@ function ContainerInputs({inputs}) {
       <Input 
       label={inputs.especie.label} type={inputs.especie.type} name={inputs.especie.name} placeholder={inputs.especie.placeholder} onChange={inputs.especie.onChange}>
       </Input>
+      <Input 
+      label={inputs.genero.label} type={inputs.genero.type} name={inputs.genero.name} placeholder={inputs.genero.placeholder} onChange={inputs.genero.onChange}>
+      </Input>
     </div>
   )
 }

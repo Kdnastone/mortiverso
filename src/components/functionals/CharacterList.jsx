@@ -10,9 +10,9 @@ const CharacterList = ({ characters }) => {
             <figure>
               <img 
                 src={`${character.image}?${new Date().getTime()}`}
-                alt={character.name} 
               />
             </figure>
+            <p>{character.id}</p>
             <h3>{character.name}</h3>
             <p>Estado: {character.status}</p>
             <p>Especie: {character.species}</p>

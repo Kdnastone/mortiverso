@@ -3,17 +3,18 @@ import Button from '../components/basics/Button'
 import Modal from '../components/functionals/Modal'
 import Layout from '../components/functionals/Layout'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './new.css'
 
-export default function New() {
+export default function New({addCharacter}) {
 
 //Estados para los datos de los inputs
-const [name, setName] = useState("")
+const [nombre, setName] = useState("")
 const [imageUrl, setImage] = useState("")
 const [estado, setState] = useState("")
 const [especie, setSpace] = useState("")
+const [genero, setGender] = useState("")
 
 //estado para el renderizado condicional del modal
 const [showModal, setShowModal] = useState(false)
@@ -21,8 +22,18 @@ const [showModal, setShowModal] = useState(false)
 //estado para el texto del modal
 const [textModal, setTextModal] = useState('')
 
+//estado para el id
+const [idState, setIdState] = useState(827)
+
 //estado para el objeto personaje
-const [personaje, setPersonaje] = useState({ img: null, nombre: null, state: null, space: null })
+const [personaje, setPersonaje] = useState({id:null, image: null, name: null, status: null, species: null, gender: null })
+
+useEffect(() =>{
+  //válida que se agregué el personaje cuando hayan cambios y no este en null
+  if (personaje !== null && Object.values(personaje).some(val => val !== null)) {
+     addCharacter(personaje)
+  }
+},[personaje, idState])
 
 //función para cerrar el modal
 const handlerButton = () =>{
@@ -61,15 +72,20 @@ const handlerState = (event) => {
 
 //función para obtener el dato del input space
 const handlerSpace = (event) => {
-  const space = event.target.value;
-  setSpace(primeraMayuscula(space)) 
+  const spice = event.target.value;
+  setSpace(primeraMayuscula(spice)) 
+};
+//función para obtener el dato del input genero
+const handlerGender = (event) => {
+  const gender = event.target.value;
+  setGender(primeraMayuscula(gender)) 
 };
 
 //función cuándo se hace el envío del formulario
 const handlerSubmit = (event) => {
   event.preventDefault();
 
-  if (name === "" || name === null || !validationText(name)) {
+  if (nombre === "" || nombre === null || !validationText(nombre)) {
       setTextModal("El nombre es inválido");
       setShowModal(true)
       return;
@@ -86,26 +102,44 @@ const handlerSubmit = (event) => {
       setShowModal(true)
       return;
   }
-  
+  if (genero === "" || genero === null || !validationText(genero)) {
+    setTextModal("El género es inválido");
+    setShowModal(true)
+    return;
+  }
+ 
+
+  //texto que aparecera el el modal cuando se agregue un personaje
   setTextModal('Personaje agregado')
+
+  //cambiar estado del modal
   setShowModal(true)
-    
+
+  //incrementar el id
+  const nuevoId = idState + 1
+  setIdState(nuevoId)
+
+  //creación del objeto personaje con los datos del form
   setPersonaje({
-    nombre: name,
-    img: imageUrl,
-    state: estado,
-    space: especie
+    id: nuevoId,
+    image: imageUrl,
+    name: nombre,
+    status: estado,
+    species: especie,
+    gender: genero
   })
-  event.target.reset()
   
-  console.log(personaje)
+  //limpiar form
+  event.target.reset()
+
 }
 
 //Constante que contiene los datos de los inputs
 const inputs = {imagen: {label:"Imagen:", type:"text", name:"image", placeholder:'Ingrese la URL', onChange: handlerImg},
-                nombre: {label:"Nombre:", type:"text", name:"nombre", onChange:handlerName},
+                nombre: {label:"Nombre:", type:"text", name:"name", onChange:handlerName},
                 estado: {label:"Estado:", type:"text", name:"state", placeholder:'Ej: Vivo', onChange:handlerState},
-                especie: {label:"Especie:", type:"text", name:"spice", placeholder:'Ej: Humano', onChange:handlerSpace}
+                especie: {label:"Especie:", type:"text", name:"spice", placeholder:'Ej: Humano', onChange:handlerSpace},
+                genero: {label:"Género:", type:"text", name:"gender", placeholder:'Sexo con el cual se identifique', onChange:handlerGender},
 }
   return (
     <Layout>
