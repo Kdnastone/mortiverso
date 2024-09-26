@@ -1,6 +1,6 @@
-import Layout from '../components/functionals/Layout'
-import PropTypes from "prop-types";
-import TeamInfo from "../components/info/TeamInfo";
+import Layout from '../components/functionals/Layout';
+import PropTypes from 'prop-types';
+import TeamInfo from '../components/info/TeamInfo';
 
 const Team = ({ setRoute }) => {
   return (
@@ -10,9 +10,9 @@ const Team = ({ setRoute }) => {
         <section>
           <h2>Nuestra Historia</h2>
           <p>
-            Somos mujeres estudiantes del programa 'Análisis y Desarrollo de Software' en el Servicio Nacional de Aprendizaje (SENA), 
-            y hemos aplicado a la convocatoria 'MUJERES DIGITALES SENA 2024', desarrollada en colaboración con la Cámara Colombo-Alemana 
-            | AHK Colombia y KeyCode Latam. Nuestro objetivo es aprender y aplicar los conocimientos adquiridos en el programa y en la 
+            Somos mujeres estudiantes del programa 'Análisis y Desarrollo de Software' en el Servicio Nacional de Aprendizaje (SENA),
+            y hemos aplicado a la convocatoria 'MUJERES DIGITALES SENA 2024', desarrollada en colaboración con la Cámara Colombo-Alemana
+            | AHK Colombia y KeyCode Latam. Nuestro objetivo es aprender y aplicar los conocimientos adquiridos en el programa y en la
             convocatoria para desarrollar proyectos innovadores que contribuyan al crecimiento de la industria de la tecnología en Colombia.
           </p>
         </section>
