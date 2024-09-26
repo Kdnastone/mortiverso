@@ -1,11 +1,12 @@
 import React from 'react';
-import Layout from "../components/basics/Layout";
+import Layout from "../components/functionals/Layout";
 import PropTypes from "prop-types";
 import CharacterList from '../components/functionals/CharacterList.jsx';
 
-const Characters = ({ setRoute, characters }) => {
+
+const Characters = ({ characters }) => {
   return (
-    <Layout setRoute={setRoute}>
+    <Layout>
       <div className="home">
         <h1>Rick and Morty - Personajes</h1>
         <CharacterList characters={characters} />
@@ -15,7 +16,6 @@ const Characters = ({ setRoute, characters }) => {
 };
 
 Characters.propTypes = {
-  setRoute: PropTypes.func.isRequired,
   characters: PropTypes.array.isRequired,
 };
 

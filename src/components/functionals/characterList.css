@@ -3,6 +3,8 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+
+    
 }
 
 .card {
@@ -24,11 +26,13 @@
 
 .card div figure {
     width: 100%;
+    margin: 0;
     padding: 20px;
 }
 
 .card div figure img {
     width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 
