@@ -27,6 +27,8 @@
     color: black;
     width: 30%;
     margin-right: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .modal  button{
@@ -36,4 +38,10 @@
     font-size: 18px;
     margin-right: 1.5em;
     margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .modal {
+        max-width: 100%;
+    }
 }
