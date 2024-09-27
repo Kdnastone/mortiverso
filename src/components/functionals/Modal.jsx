@@ -5,7 +5,7 @@ import './styleModal.css'
 
 function Modal({text, handlerButton}) {
   return (
-    <div className='modal'>      
+    <div className='modal'>
         <p>{text}</p>
         <Button handlerButton={handlerButton} text='OK' type='button'></Button>       
     </div>

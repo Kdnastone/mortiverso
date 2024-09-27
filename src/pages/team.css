@@ -90,6 +90,21 @@
     font-size: 2em;
     color:rgb(255, 255, 255)
   }
+
+  section h3 {
+    font-size: 1.3em;
+    font-weight: normal;
+    color:rgb(255, 255, 255)
+  }
+
+  section h3 a {
+    color: #d8b2ff;
+    text-decoration: none;
+}
+
+section h3 a:hover {
+    text-decoration: underline;
+}
   
   section p {
     font-size: 16px;
