@@ -1,0 +1,146 @@
+/* Estilos generales para el equipo */
+.team-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    background-color: #888383;
+    border-radius: 10px;
+  }
+
+/* Estilos para el h1 en el componente Team */
+.team h1 {
+  font-size: 36px; 
+  font-weight: bold;
+  color: rgb(91, 209, 220);
+  background-color: black;
+  text-align: center; 
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+  /* Estilos para cada card del equipo */
+  .card {
+    background-color: #b4c9ee;
+    border: 1px solid #4044b4;
+    border-radius: 8px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Imagen de perfil */
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  /* Nombre del miembro del equipo */
+  .card h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Enlaces de GitHub y LinkedIn */
+  .card p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  /* Sstilos para los enlaces */
+  .card a {
+    color: #6d16e6;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sección de historia */
+  section {
+    padding: 20px;
+    background-color: rgb(56, 59, 62);;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(56, 59, 62);
+    font-weight: bold;
+    text-align: center; 
+    margin: 20px 0;
+    border-radius: 8px;
+    color: rgb(91, 209, 220);
+  }
+  
+  section h2 {
+    font-size: 22px;
+    color: rgb(91, 209, 220);
+  }
+  
+  section p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* Diseño responsivo */
+@media (max-width: 768px) {
+  .team-cards {
+      justify-content: center;
+  }
+
+  .card {
+      width: 90%;
+      max-width: 300px;
+  }
+
+  section {
+      padding: 15px;
+  }
+
+  section h2 {
+      font-size: 20px;
+  }
+
+  section p {
+      font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+      width: 100%;
+      max-width: none;
+  }
+
+  .card h2 {
+      font-size: 16px;
+  }
+
+  .card p {
+      font-size: 12px;
+  }
+
+  section h2 {
+      font-size: 18px;
+  }
+
+  section p {
+      font-size: 14px;
+  }
+}
+  

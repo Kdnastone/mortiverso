@@ -1,48 +1,71 @@
-.characterList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-
-    
-}
+  /* Estilos generales de la carp */
+  .characterList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: #888383;
+  }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 300px;
-    background-color: rgb(56, 56, 56);
-    border-radius: 15px;
+  flex: 1 1 calc(33.33% - 40px);
+  max-width: 300px;
+  min-width: 280px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card div {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.card div figure {
-    width: 100%;
+  /* Estilos para la imagen del personaje */
+  .card figure {
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
-.card div figure img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  height: auto;
 }
 
-.card div h3 {
-    margin: 0;
-    padding-bottom: 10px;
-    border-bottom: 2px solid rgb(6, 142, 226);
+/* Texto dentro de la cadr*/
+.card p {
+  font-size: 18px;
+  color: #666;
+  margin: 10px 0 5px;
+  margin-top: 0;
 }
 
-.home h1 {
-    text-align: center;
-    margin: 20px 0;
+.card h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
 }
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Diseño responsivo */
+@media (max-width: 900px) {
+  .characterList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .characterList {
+    grid-template-columns: 1fr;
+  }
+} 
+  
