@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from "../components/functionals/Layout";
 import PropTypes from "prop-types";
 import CharacterList from '../components/functionals/CharacterList.jsx';
+import './characters.css'
 
 
 const Characters = ({ characters }) => {

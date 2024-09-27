@@ -1,0 +1,12 @@
+/* Estilos para h1 Characters */
+.home h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #42c7ef; 
+    background-color: black; 
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
