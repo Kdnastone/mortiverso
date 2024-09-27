@@ -2,9 +2,9 @@ div{
     display: flex;
     flex-direction: column;  
     align-items: center;   
-    gap:1em;
-    
+    gap:1em; 
 }
+
 div input{
     width: 60vw;
     max-width: 500px;
@@ -12,5 +12,9 @@ div input{
     height:40px;
     background-color: darkgray;
     color:black;
-    font-size: 20px;
+    font-size: 1em;
+}
+
+div label{
+    font-size: 1.5em;
 }

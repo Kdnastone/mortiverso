@@ -144,7 +144,7 @@ const inputs = {imagen: {label:"Imagen:", type:"text", name:"image", placeholder
   return (
     <Layout>
       <form onSubmit={handlerSubmit}>
-          <h2>Agregar Personaje</h2>
+          <h2>AGREGAR PERSONAJE</h2>
           <ContainerInputs inputs={inputs}></ContainerInputs>
           <Button type='Submit' text='Agregar'></Button>
           {showModal? <Modal handlerButton={handlerButton} text={textModal} /> : null}

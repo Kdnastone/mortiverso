@@ -14,7 +14,7 @@
 .team h1 {
   font-size: 36px; 
   font-weight: bold;
-  color: rgb(91, 209, 220);
+  color: deepskyblue;
   background-color: black;
   text-align: center; 
   margin: 20px 0;
@@ -83,12 +83,12 @@
     text-align: center; 
     margin: 20px 0;
     border-radius: 8px;
-    color: rgb(91, 209, 220);
+    color: rgb(255, 255, 255);
   }
   
   section h2 {
-    font-size: 22px;
-    color: rgb(91, 209, 220);
+    font-size: 2em;
+    color:rgb(255, 255, 255)
   }
   
   section p {
