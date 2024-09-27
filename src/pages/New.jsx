@@ -85,7 +85,7 @@ const handlerGender = (event) => {
 const handlerSubmit = (event) => {
   event.preventDefault();
 
-  if (nombre === "" || nombre === nullx || !validationText(nombre)) {
+  if (nombre === "" || nombre === null || !validationText(nombre)) {
       setTextModal("El nombre es inválido");
       setShowModal(true)
       return;
