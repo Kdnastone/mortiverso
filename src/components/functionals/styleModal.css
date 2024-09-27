@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lilita+One&family=Protest+Guerrilla&display=swap');
+.modal{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: end;
+    text-align: center;
+    position: fixed;
+    background-image: url(../../assets/ModalFondo.png);
+    background-size: cover;
+    background-position: center;
+    height: 10em;
+    min-width: 18em;
+    max-width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;   
+    font-size: 0.9em;
+    font-family: "Lilita One", sans-serif; 
+    padding-right: 2em;
+    gap:0;
+
+}
+
+.modal  p{  
+    color: black;
+    width: 30%;
+    margin-right: 0.5em;
+}
+.modal  button{
+    width: 20%;
+    height: 20%;
+    padding: 2px;
+    font-size: 18px;
+    margin-right: 1.5em;
+    margin-top: 0;
+}

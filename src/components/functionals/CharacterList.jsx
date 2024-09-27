@@ -10,7 +10,6 @@ const CharacterList = ({ characters }) => {
             <figure>
               <img 
                 src={`${character.image}?${new Date().getTime()}`}
-                alt={character.name} 
               />
             </figure>
             <h3>{character.name}</h3>
